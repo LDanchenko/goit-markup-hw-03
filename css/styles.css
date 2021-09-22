@@ -6,6 +6,7 @@
   --hero-background-color: #2f303a;
   --button-background-color: #f5f4fa;
   --line-color: #ececec;
+  --card-set-gap: 30px;
 }
 
 html {
@@ -17,7 +18,9 @@ html {
 *::after {
   box-sizing: inherit;
 }
-
+p {
+  margin: 0;
+}
 ul {
   margin: 0;
   padding: 0;
@@ -33,6 +36,10 @@ h6 {
   margin-bottom: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
 body {
   /* margin: 0; */
   background-color: var(--primary-background-color);
@@ -61,9 +68,9 @@ body {
   /* margin: 0;
   padding: 0; */
 }
-.page-header {
+/* .page-header {
   border-bottom: 1px solid var(--line-color);
-}
+} */
 
 .logo-header {
   color: var(--title-text-color);
@@ -171,12 +178,12 @@ body {
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.62;
+  line-height: 1.625;
   text-align: center;
   border: 0;
   letter-spacing: 0.03em;
   border-radius: 4px;
-  padding: 10px 32px;
+  padding: 6px 22px;
 }
 .btn:hover,
 .btn:focus {
@@ -297,11 +304,11 @@ body {
   color: var(--accent-color);
 }
 
-.portfolio-list .portfolio-item {
+/* .portfolio-list .portfolio-item {
   border: 1px solid #eeeeee;
-}
+} */
 
-.portfolio-item > h2 {
+.portfolio-item .card-heading {
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 18px;
@@ -309,9 +316,12 @@ body {
   letter-spacing: 0.06em;
 }
 
-.portfolio-item > p {
+.portfolio-item.card-text {
+  /* padding: 0; */
   font-size: 16px;
-  line-height: 1.87px;
+  line-height: 1.875;
+  /* margin-top: 0;
+  margin-bottom: 20px; */
 }
 .description {
   margin-bottom: 0;
@@ -349,6 +359,12 @@ body {
 
 .team-list-item img {
   margin-bottom: 30px;
+}
+
+/* .portfolio-item img {
+} */
+.portfolio-item h2 {
+  margin-bottom: 4px;
 }
 
 .team-list-item h3 {
@@ -391,14 +407,26 @@ body {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-}
-
-.portfolio-item:nth-child(3n) {
-  margin-right: 0;
+  margin-right: calc(-1 * var(--card-set-gap));
+  margin-bottom: calc(-1 * var(--card-set-gap));
 }
 
 .portfolio-item {
-  width: calc((100% - 90px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
+  /* width: calc((100% - 90px) / 3); */
+  margin-right: var(--card-set-gap);
+  margin-bottom: var(--card-set-gap);
+  flex-basis: calc((100% / 3)- var(--card-set-gap));
+  border: 1px solid #eeeeee;
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+}
+
+/* .card-thumb {
+  /* outline: 1px solid tomato; */
+/* margin-bottom: 30px; */
+
+.card-content {
+  padding: 30px 24px 20px 24px;
+  border: 1px solid #eeeeee;
+
+  /* outline: 1px solid tomato; */
 }
