@@ -40,6 +40,7 @@ h6 {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 body {
   background-color: var(--primary-background-color);
@@ -369,7 +370,6 @@ body {
   margin-right: var(--card-set-gap);
   margin-bottom: var(--card-set-gap);
   flex-basis: calc((100% / 3) - var(--card-set-gap));
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .card-content {
