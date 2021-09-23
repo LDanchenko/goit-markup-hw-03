@@ -40,7 +40,7 @@ h6 {
 img {
   display: block;
   max-width: 100%;
-  height: auto;
+  height: a;
 }
 body {
   background-color: var(--primary-background-color);
@@ -186,6 +186,7 @@ body {
 .btn:hover,
 .btn:focus {
   background-color: var(--accent-color);
+  color: var(--primary-background-color);
 }
 
 .accent-btn {
@@ -372,7 +373,8 @@ body {
   flex-basis: calc((100% / 3) - var(--card-set-gap));
 }
 
-.card-content {
-  padding: 30px 24px 20px 24px;
+.portfolio-card-content {
+  padding: 20px 24px;
   border: 1px solid #eeeeee;
+  border-top: 0;
 }
