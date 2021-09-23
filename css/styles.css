@@ -271,6 +271,7 @@ body {
 }
 
 .footer {
+  padding: 60px 0;
   background-color: var(--hero-background-color);
 }
 
@@ -333,11 +334,7 @@ body {
   margin-bottom: 50px;
 }
 
-.page-footer {
-  padding: 60px 0;
-}
-
-.page-footer .logo-footer {
+.footer .logo-footer {
   display: block;
   margin-bottom: 20px;
 }
